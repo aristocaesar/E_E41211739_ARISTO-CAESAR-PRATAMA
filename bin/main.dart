@@ -2,15 +2,13 @@ import 'dart:io';
 import 'dart:convert';
 
 // Ternary
-void cekNilai(int number) {
-  const kkm = 75;
+void cekCuaca() {
+  print("Apakah cuaca hujan ? (y/n)");
+  var cuaca = stdin.readLineSync(encoding: utf8);
   // IF Ternary
-  var lulus = number >= kkm ? true : false;
-  if (lulus) {
-    print('Nilai ($number) = cukup - LULUS');
-  } else {
-    print("Nilai ($number) = tidak cukup - TIDAK LULUS");
-  }
+  cuaca == "y"
+      ? print('Cuaca hujan, gunakan payung!')
+      : print("Cuata tidak hujan, tidak perlu menunggunakan payung");
 }
 
 // Werewolf
@@ -63,7 +61,10 @@ void wereWolf() {
 }
 
 // Perulangan Maju Mundur
-void majuMundur(int number) {
+void majuMundur() {
+  print("Masukkan angka :");
+  int number = int.parse(stdin.readLineSync(encoding: utf8).toString());
+  print("-");
   // Increment
   for (int i = 1; i <= number; i++) {
     print(i);
@@ -76,12 +77,12 @@ void majuMundur(int number) {
 
 void main(List<String> args) {
   print("---1.TERNARY---");
-  cekNilai(75);
+  cekCuaca();
   print("-------------");
   print("---2.WEREWOLF---");
   wereWolf();
   print("-------------");
   print("---3.PERULANGAN MAJU MUNDUR---");
-  majuMundur(5);
+  majuMundur();
   print("-------------");
 }
