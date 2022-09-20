@@ -10,8 +10,21 @@ void cekNilai(int number) {
   }
 }
 
+// Perulangan Maju Mundur
+void majuMundur(int number) {
+  for (int i = 1; i <= number; i++) {
+    print(i);
+  }
+  for (int i = number; i >= 1; i--) {
+    print(i);
+  }
+}
+
 void main(List<String> args) {
   print("---1.TERNARY---");
   cekNilai(75);
+  print("-------------");
+  print("---3.PERULANGAN MAJU MUNDUR---");
+  majuMundur(5);
   print("-------------");
 }
