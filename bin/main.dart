@@ -66,12 +66,14 @@ void majuMundur() {
   int number = int.parse(stdin.readLineSync(encoding: utf8).toString());
   print("-");
   // Increment
+  print("LOOPING PERTAMA");
   for (int i = 1; i <= number; i++) {
-    print(i);
+    print("$i I Love Coding");
   }
   // Decrement
+  print("LOOPING KEDUA");
   for (int i = number; i >= 1; i--) {
-    print(i);
+    print("$i I will become a mobile developer");
   }
 }
 
