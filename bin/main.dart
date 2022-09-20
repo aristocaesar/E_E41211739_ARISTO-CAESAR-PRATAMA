@@ -22,12 +22,15 @@ void wereWolf() {
       if (nama.toString() == "") {
         throw "Nama harus terisi!";
       }
-      print("Pilihan Peran");
+      print("Pilihan Peran :");
       print("1.Penyihir");
       print("2.Guard");
       print("3.Werewolf");
       print("Masukkan peran ( no.urutan ) : ");
       var peran = stdin.readLineSync(encoding: utf8);
+      if (peran.toString() == "") {
+        throw "Peran harus dipilih!";
+      }
       switch (peran.toString()) {
         case "1":
           print(
@@ -43,9 +46,6 @@ void wereWolf() {
           break;
         default:
           throw "$nama , Peran yang kamu pilih tidak tersedia!";
-      }
-      if (peran.toString() == "") {
-        throw "Peran harus dipilih!";
       }
       print("Apakah anda ingin bermain lagi ? (y/n) ");
       var lagi = stdin.readLineSync(encoding: utf8);
